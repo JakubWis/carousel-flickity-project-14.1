@@ -2,14 +2,52 @@
 	<head>
 	  <meta charset="utf-8">
 
-	  <title>Carousel</title>
+	  <title>Cities you must visit</title>
 
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="vendor/Normalize.css">
+	  <link rel="stylesheet" href="vendor/flickity.min.css">
 	  <link rel="stylesheet" href="css/style.css">
 	</head>
 
 	<body>
+		<button class="restart" id="restart"> <<< </button>
+		<div class="main-carousel">
+		  <div class="carousel-cell" style="background-image: url('https://images.pexels.com/photos/998736/pexels-photo-998736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');"
+		  id="carousel-cell1">
+			<div class="container">
+				<h1>Barcelona</h1>
+			</div>
+		  </div>
+		  <div class="carousel-cell" style="background-image: url('https://images.pexels.com/photos/1344545/pexels-photo-1344545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');"
+		  id="carousel-cell2">
+			<div class="container">
+				<h1>Tokyo</h1>
+			</div>
+		  </div>
+		  <div class="carousel-cell" style="background-image: url('https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');"
+		  id="carousel-cell3">
+			<div class="container">
+				<h1>New York City</h1>
+			</div>
+		  </div>
+		  <div class="carousel-cell" style="background-image: url('https://images.unsplash.com/photo-1513377888081-794d8e958972?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');"
+		  id="carousel-cell4">
+			<div class="container">
+				<h1>Lisbon</h1>
+			</div>
+		  </div>
+		  <div class="carousel-cell" style="background-image: url('https://images.pexels.com/photos/417344/pexels-photo-417344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');"
+		  id="carousel-cell5">
+		  	<div class="container">
+				<h1>Venice</h1>
+			</div>
+		  </div>
+		</div>
+		<div class="progress-bar"></div>
 
+		<script src="vendor/flickity.pkgd.min.js"></script>
+		<script src="vendor/hash.js"></script>
 		<script src="js/script.js"></script>
 
 	</body>

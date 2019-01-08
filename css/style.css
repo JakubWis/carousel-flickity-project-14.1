@@ -1,0 +1,60 @@
+.restart {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: #fff;
+  z-index: 2;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  transition: all 0.3s ease; }
+  .restart:hover {
+    background-color: rgba(0, 0, 0, 0.6); }
+
+.main-carousel {
+  height: 50%; }
+  .main-carousel .carousel-cell {
+    display: block;
+    width: 100%;
+    /* full width */
+    height: 100%;
+    /* height of carousel */
+    min-height: 250px;
+    background-size: cover;
+    background-position: center; }
+    .main-carousel .carousel-cell .container {
+      width: 1200px;
+      margin: 0 auto;
+      height: 100%;
+      position: relative; }
+      .main-carousel .carousel-cell .container h1 {
+        color: #fff;
+        font-weight: 300;
+        position: absolute;
+        bottom: 0;
+        padding-left: 60px;
+        padding-bottom: 30px;
+        font-size: 80px; }
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333; }
+
+.flickity-page-dots {
+  display: none; }
+
+@media (max-width: 490px) {
+  .main-carousel .carousel-cell .container h1 {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 60px;
+    width: 300px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }

@@ -12,42 +12,59 @@
 
 	<body>
 		<button class="restart" id="restart"> <<< </button>
-		<div class="main-carousel">
-		  <div class="carousel-cell" style="background-image: url('https://images.pexels.com/photos/998736/pexels-photo-998736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');"
-		  id="carousel-cell1">
-			<div class="container">
-				<h1>Barcelona</h1>
-			</div>
-		  </div>
-		  <div class="carousel-cell" style="background-image: url('https://images.pexels.com/photos/1344545/pexels-photo-1344545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');"
-		  id="carousel-cell2">
-			<div class="container">
-				<h1>Tokyo</h1>
-			</div>
-		  </div>
-		  <div class="carousel-cell" style="background-image: url('https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');"
-		  id="carousel-cell3">
-			<div class="container">
-				<h1>New York City</h1>
-			</div>
-		  </div>
-		  <div class="carousel-cell" style="background-image: url('https://images.unsplash.com/photo-1513377888081-794d8e958972?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');"
-		  id="carousel-cell4">
-			<div class="container">
-				<h1>Lisbon</h1>
-			</div>
-		  </div>
-		  <div class="carousel-cell" style="background-image: url('https://images.pexels.com/photos/417344/pexels-photo-417344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');"
-		  id="carousel-cell5">
-		  	<div class="container">
-				<h1>Venice</h1>
-			</div>
-		  </div>
+		<div class="main-carousel" id="results">
 		</div>
 		<div class="progress-bar"></div>
 
+		<script id="template-cell" type="x-tmpl-mustache">
+			<div class="carousel-cell" style="background-image: url(' {{ image }} ');" id="{{ hashId }}">
+				<div class="container">
+					<h1>{{ title }}</h1>
+					<p>{{ description }}</p>
+				</div>
+			</div>
+		</script>
+
+		
+
+		<script>
+		let allSlides = [
+		    {
+		        image: 'https://images.pexels.com/photos/998736/pexels-photo-998736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+		        hashId: 'carousel-cell1',
+		        title: 'Barcelona',
+		        description: 'Go and visit it!'
+		    },
+		    {
+		        image: 'https://images.pexels.com/photos/1344545/pexels-photo-1344545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+		        hashId: 'carousel-cell2',
+		        title: 'Tokyo',
+		        description: 'Go and visit it!'    
+		    },
+		    {
+		        image: 'https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+		        hashId: 'carousel-cell3',
+		        title: 'New York City',
+		        description: 'Go and visit it!'
+		    },
+		    {
+		        image: 'https://images.unsplash.com/photo-1513377888081-794d8e958972?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+		        hashId: 'carousel-cell4',
+		        title: 'Lisbon',
+		        description: 'Go and visit it!'
+		    },
+		    {
+		        image: 'https://images.pexels.com/photos/417344/pexels-photo-417344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+		        hashId: 'carousel-cell5',
+		        title: 'Venice',
+		        description: 'Go and visit it!'
+		    }
+		];
+		</script>
+
 		<script src="vendor/flickity.pkgd.min.js"></script>
 		<script src="vendor/hash.js"></script>
+		<script src="vendor/mustache.min.js"></script>
 		<script src="js/script.js"></script>
 
 	</body>

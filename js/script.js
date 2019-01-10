@@ -1,6 +1,22 @@
 var elem = document.querySelector('.main-carousel');
 var btnRestart = document.getElementById('restart');
 var progressBar = document.querySelector('.progress-bar')
+var templateCell = document.getElementById('template-cell').innerHTML;
+(function(){ 
+console.log(templateCell)
+Mustache.parse(templateCell);
+var cells = '';
+
+for(var i = 0; i < allSlides.length; i++){
+        console.log(allSlides[i]);
+        cells += Mustache.render(templateCell, allSlides[i]);
+        console.log(cells)
+    }
+
+ results.insertAdjacentHTML('beforeend', cells);
+
+})(); 
+
 var flkty = new Flickity( elem, {
   // options
   cellAlign: 'left',

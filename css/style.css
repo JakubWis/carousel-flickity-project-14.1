@@ -55,6 +55,10 @@
 .flickity-page-dots {
   display: none; }
 
+#map {
+  height: calc(50% - 20px);
+  width: 100%; }
+
 @media (max-width: 490px) {
   .main-carousel .carousel-cell .container h1 {
     padding-left: 10px;

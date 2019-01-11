@@ -15,6 +15,7 @@
 		<div class="main-carousel" id="results">
 		</div>
 		<div class="progress-bar"></div>
+		<div id="map"></div>
 
 		<script id="template-cell" type="x-tmpl-mustache">
 			<div class="carousel-cell" style="background-image: url(' {{ image }} ');" id="{{ hashId }}">
@@ -33,31 +34,36 @@
 		        image: 'https://images.pexels.com/photos/998736/pexels-photo-998736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 		        hashId: 'carousel-cell1',
 		        title: 'Barcelona',
-		        description: 'Go and visit it!'
+		        description: 'Go and visit it!',
+		        coords: {lat: 41.385063, lng: 2.173404}
 		    },
 		    {
 		        image: 'https://images.pexels.com/photos/1344545/pexels-photo-1344545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 		        hashId: 'carousel-cell2',
 		        title: 'Tokyo',
-		        description: 'Go and visit it!'    
+		        description: 'Go and visit it!' ,
+		        coords: {lat: 35.689487, lng: 139.691711}   
 		    },
 		    {
 		        image: 'https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 		        hashId: 'carousel-cell3',
 		        title: 'New York City',
-		        description: 'Go and visit it!'
+		        description: 'Go and visit it!',
+		        coords: {lat: 40.712776, lng: -74.005974} 
 		    },
 		    {
 		        image: 'https://images.unsplash.com/photo-1513377888081-794d8e958972?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
 		        hashId: 'carousel-cell4',
 		        title: 'Lisbon',
-		        description: 'Go and visit it!'
+		        description: 'Go and visit it!',
+		        coords: {lat: 38.722252, lng: -9.139337} 
 		    },
 		    {
 		        image: 'https://images.pexels.com/photos/417344/pexels-photo-417344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 		        hashId: 'carousel-cell5',
 		        title: 'Venice',
-		        description: 'Go and visit it!'
+		        description: 'Go and visit it!',
+		        coords: {lat: 45.440845, lng: 12.315515} 
 		    }
 		];
 		</script>
@@ -65,6 +71,7 @@
 		<script src="vendor/flickity.pkgd.min.js"></script>
 		<script src="vendor/hash.js"></script>
 		<script src="vendor/mustache.min.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCak31wrpx39J9A2WHv6TjAWoS7iaf2vBU&callback=initMap"></script>
 		<script src="js/script.js"></script>
 
 	</body>

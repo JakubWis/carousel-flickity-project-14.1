@@ -15,6 +15,13 @@ for(var i = 0; i < allSlides.length; i++){
 
 })();
 
+var flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  contain: true,
+  hash: true
+});
+
 // Initialize and add the map
 window.initMap = function() {
   // The location of Uluru
@@ -24,25 +31,27 @@ window.initMap = function() {
       document.getElementById('map'), {zoom: 4, center: uluru});
   // The marker, positioned at Uluru
   for (var i = 0; i < allSlides.length; i++) {
-    var marker = new google.maps.Marker({position: allSlides[i].coords, map: map});
-  }
-  
+    var marker = new google.maps.Marker({position: allSlides[i].coords, map: map});  
+    marker.addListener('click', slideSelect.bind( null, i))
+  } 
 } 
 
-var flkty = new Flickity( elem, {
-  // options
-  cellAlign: 'left',
-  contain: true,
-  hash: true
-});
+function slideSelect(index){flkty.select(index);} 
 
-btnRestart.addEventListener('click', function(){
-	flkty.select( 0 );
-})
+btnRestart.addEventListener('click', slideSelect.bind( null, 0))
 
 flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
+});
+
+flkty.on( 'change', function( index ) {
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 7, center: allSlides[index].coords});
+  for (var i = 0; i < allSlides.length; i++) {
+    var marker = new google.maps.Marker({position: allSlides[i].coords, map: map});  
+    marker.addListener('click', slideSelect.bind( null, i))
+  }
 });
 
 
